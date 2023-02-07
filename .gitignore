@@ -16,3 +16,5 @@ build/CMakeFiles/imguimenu.dir/imgui/backends/imgui_impl_glfw.cpp.o.d
 build/CMakeFiles/imguimenu.dir/imgui/backends/imgui_impl_opengl3.cpp.o
 build/CMakeFiles/imguimenu.dir/imgui/backends/imgui_impl_opengl3.cpp.o.d
 build/*
+build/imgui.ini
+build/CMakeFiles/imguimenu.dir/compiler_depend.make
