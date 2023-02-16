@@ -1,4 +1,4 @@
-name: CMake
+name: Compile
 
 on:
   push:
@@ -6,9 +6,7 @@ on:
   pull_request:
     branches: [ "master" ]
 
-env:
-  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Release
+
 
 jobs:
   build:
@@ -21,16 +19,10 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Install Depends
-      run: sudo apt install libglfw3-dev
-
-    - name: Configure CMake
-      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
-      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: cmake ..
+      run: sudo apt install libglfw3-dev clang++
 
     - name: Build
-      # Build your program with the given configuration
-      run: make
+      run: clang++ imgui/imgui_demo.cpp imgui/imgui_draw.cpp imgui/imgui_tables.cpp imgui/imgui_widgets.cpp imgui/imgui.cpp imgui/backends/imgui_impl_glfw.cpp imgui/backends/imgui_impl_opengl3.cpp main.cpp -lGL -lglfw -o builded
 
     
 
