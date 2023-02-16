@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.22.1)
 
 project(imguimenu)
 
-set(CMAKE_CXX_COMPILER /usr/bin/clang++)
-
 add_executable(imguimenu
         # Add ImGui
         imgui/imgui_demo.cpp
